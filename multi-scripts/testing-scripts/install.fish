@@ -66,9 +66,8 @@ if ! pacman -Q yay &> /dev/null
 end
 
 # Install crystal-clients package in aur-packages-stored folder.
-log 'Installing dependancy packages for maomaowm...'
-yay -S maomaowm-git
-yay -S nwg-look wlr-dpms-git fastfetch playerctl rofi-wayland foot xdg-desktop-portal-wlr swaybg waybar wl-clip-persist cliphist wl-clipboard wlsunset xfce-polkit swaync pamixer lavalauncher-mao-git sway-audio-idle-inhibit-git swayidle dimland-git brightnessctl swayosd wlr-randr grim slurp satty swaylock-effects-git wlogout $noconfirm
+log 'Installing dependancy packages for i3wm...'
+yay -S i3-wm polybar dmenu kitty fastfetch brightnessctl pamixer pavucontrol htop nwg-look
 
 # Install crystal-themes-fonts package in aur-packages-stored folder.
 log 'Installing crystal-themes-fonts package in aur-packages-stored folder...'
@@ -78,80 +77,51 @@ yay -Bi ./../../aur-packages-stored/crystal-themes-fonts/ $noconfirm
 log 'Installing crystal-neovim package in aur-packages-stored folder...'
 yay -Bi ./../../aur-packages-stored/crystal-neovim/ $noconfirm
 
-# MaomaoWM
-if confirm-overwrite $config/maomao
-    log 'Installing maomao configs...'
-    ln -s ./../crystal-dots/.config/maomao $config/maomao
-end
-
-# Rofi
-if confirm-overwrite $config/rofi
-    log 'Installing rofi configs...'
-    ln -s ./../crystal-dots/.config/rofi $config/rofi
-end
-
-# Foot
-if confirm-overwrite $config/foot
-    log 'Installing foot config...'
-    ln -s ./../crystal-dots/.config/foot $config/foot
-end
 
 # Fish shell
 if confirm-overwrite $config/fish
     log 'Installing fish shell config...'
-    ln -s ./../crystal-dots/.config/fish $config/fish
+    ln -s ./../i3-dotfiles-template/.config/fish $config/fish
 end
 
 # Posh themes
 if confirm-overwrite $config/terminal-posh-themes
     log 'Installing posh themes config...'
-    ln -s ./../crystal-dots/.config/terminal-posh-themes $config/terminal-posh-themes
+    ln -s ./../i3-dotfiles-template/.config/terminal-posh-themes $config/terminal-posh-themes
 end
 
 # Neovim
 if confirm-overwrite $config/nvim
     log 'Installing neovim config...'
-    ln -s ./../crystal-dots/.config/nvim $config/nvim
-end
-
-# Wlogout
-if confirm-overwrite $config/wlogout
-    log 'Installing wlogout config...'
-    ln -s ./../crystal-dots/.config/wlogout $config/wlogout
-end
-
-# Lavalauncher
-if confirm-overwrite $config/lavalauncher
-    log 'Installing lavalauncher config...'
-    ln -s ./../crystal-dots/.config/lavalauncher $config/lavalauncher
+    ln -s ./../i3-dotfiles-template/.config/nvim $config/nvim
 end
 
 # Swaync
-if confirm-overwrite $config/swaync
-    log 'Installing swaync config...'
-    ln -s ./../crystal-dots/.config/swaync $config/swaync
+if confirm-overwrite $config/i3
+    log 'Installing i3 config...'
+    ln -s ./../i3-dotfiles-template/.config/swaync $config/swaync
 end
 
-# Waybar
-if confirm-overwrite $config/waybar
-    log 'Installing waybar config...'
-    ln -s ./../crystal-dots/.config/waybar $config/waybar
+# Polybar
+if confirm-overwrite $config/polybar
+    log 'Installing polybar config...'
+    ln -s ./../i3-dotfiles-template/.config/polybar $config/waybar
 end
 
 # Fastfetch config
 if confirm-overwrite $config/fastfetch
     log 'Installing fastfetch config...'
-    ln -s ./../crystal-dots/.config/fastfetch $config/fastfetch
+    ln -s ./../i3-dotfiles-template/.config/fastfetch $config/fastfetch
 end
 
 # GTK theme config
 if confirm-overwrite ~/.themes
     log 'Installing GTK themes...'
-    ln -s ~/crystal-dots/.themes ~/.themes
+    ln -s ~/i3-dotfiles-template/.themes ~/.themes
 end
 
 # Mouse icon config
 if confirm-overwrite ~/.icons
     log 'Installing Mouse icons themes...'
-    ln -s ~/crystal-dots/.icons ~/.icons
+    ln -s ~/i3-dotfiles-template/.icons ~/.icons
 end
