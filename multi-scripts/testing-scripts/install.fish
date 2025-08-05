@@ -96,16 +96,16 @@ if confirm-overwrite $config/nvim
     ln -s ./../i3-dotfiles-template/.config/nvim $config/nvim
 end
 
-# Swaync
+# I3
 if confirm-overwrite $config/i3
     log 'Installing i3 config...'
-    ln -s ./../i3-dotfiles-template/.config/swaync $config/swaync
+    ln -s ./../i3-dotfiles-template/.config/i3 $config/i3
 end
 
 # Polybar
 if confirm-overwrite $config/polybar
     log 'Installing polybar config...'
-    ln -s ./../i3-dotfiles-template/.config/polybar $config/waybar
+    ln -s ./../i3-dotfiles-template/.config/polybar $config/polybar
 end
 
 # Fastfetch config
