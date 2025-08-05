@@ -1,0 +1,9 @@
+low
+xrandr --output eDP-1 --gamma 1.05:0.95:0.9
+vibrant-cli eDP-1 1.33
+
+
+
+high
+xrandr --output eDP-1 --gamma 1.1:0.9:0.8
+vibrant-cli eDP-1 1.5
