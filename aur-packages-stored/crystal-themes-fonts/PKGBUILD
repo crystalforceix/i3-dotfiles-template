@@ -10,7 +10,7 @@ arch=('any')
 url='https://github.com/crystalforceix/crystal-dots'
 license=('GPL-3.0-only')
 depends=('fish' 'oh-my-posh-bin' 'papirus-icon-theme'
-	 'ttf-nerd-fonts-symbols' 'ttf-material-symbols-variable-git' 'ttf-firacode-nerd'
+	 'ttf-nerd-fonts-symbols' 'ttf-material-symbols-variable-git' 'ttf-firacode-nerd' 'ttf-meslo-nerd'
 	)
 optdepends=('spotify: music player'
             'vscode: code editor'

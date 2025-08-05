@@ -67,7 +67,7 @@ end
 
 # Install crystal-clients package in aur-packages-stored folder.
 log 'Installing dependancy packages for i3wm...'
-yay -S i3-wm polybar dmenu kitty fastfetch brightnessctl pamixer pavucontrol htop nwg-look
+yay -S i3-wm polybar dmenu kitty fastfetch brightnessctl pamixer pavucontrol htop nwg-look feh
 
 # Install crystal-themes-fonts package in aur-packages-stored folder.
 log 'Installing crystal-themes-fonts package in aur-packages-stored folder...'
